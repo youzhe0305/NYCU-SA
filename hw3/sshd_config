@@ -1,0 +1,25 @@
+加入以下這些:
+
+Match User sftp-u1
+    ForceCommand internal-sftp -u 077
+    ChrootDirectory /home/sftp
+    AllowTcpForwarding no
+    X11Forwarding no
+
+Match User sftp-u2
+    ForceCommand internal-sftp -u 077
+    ChrootDirectory /home/sftp
+    AllowTcpForwarding no
+    X11Forwarding no
+
+Match User sysadm
+    AllowTcpForwarding no
+    X11Forwarding no
+
+Match User anonymous
+    ForceCommand internal-sftp -u 077
+    ChrootDirectory /home/sftp
+    AllowTcpForwarding no
+    X11Forwarding no
+
+Subsystem sftp internal-sftp
