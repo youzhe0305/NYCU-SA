@@ -5,6 +5,8 @@ sudo mkdir /home/sftp/hidden
 cd /home
 chmod 755 sftp
 sudo setfacl -m user:sysadm:rwxpDdaARWcCos::allow sftp
+sudo setfacl -m user:sysadm:rwxpDdaARWcCos::allow sftp/public
+sudo setfacl -m user:sysadm:rwxpDdaARWcCos::allow sftp/hidden
 
 cd sftp
 sudo chmod 775 public
